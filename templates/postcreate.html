@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Add a post for {{user.first_name}} {{user.last_name}}</h1>
+</head>
+<body>
+      <form method="POST">
+          <p> Title<input type = "text" name = "title"></p>
+          <p> Post Content <input type = "text" name = "content"></p>
+
+      <button type = "submit">Add Post</button>  <button formaction = "/users/{{user.id}}">Cancel</button>
+    </form>
+</body>
+</html>

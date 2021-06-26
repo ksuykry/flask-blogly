@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>{{ user.first_name }} {{user.last_name}}</h1>
+</head>
+<body>
+    <img src = "{{user.image_url}}" height= 100px width = 100px>
+    <ul>
+        {% for post in posts %}
+            <li><a href="/users/{{ user.id }}/{{ post.id }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <form>
+    <button formaction = "/users/{{user.id}}/newpost">Add Post</button>
+    </form>
+    <form>
+    <p><button formaction = "/users/{{user.id}}/delete">Delete User</button>  <button formaction = "/users/{{user.id}}/edit">Edit User</button> </p>
+    </form>
+    </form>
+</body>
+</html>
